@@ -1,0 +1,85 @@
+/* NEW global backdrop */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #2050a3 0%, #051937 100%);
+  color: #eee;                         /* default light text */
+}
+
+/* container keeps things centered */
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* give the title a subtle shadow so it pops */
+h1 {
+  margin-top: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+/* rest of the CSS (inputs, buttons, .card, .error, .tracks) stays the same,
+   except we tweak the card bg + text for readability: */
+
+   .card {
+    background: #fff;          /* keep the solid white card */
+    color: #000;               /* ← add this line */
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  }
+
+.error { color: #ff6b6b; }
+
+/* ───── inputs & buttons ───── */
+form {
+  display: flex;
+  flex-wrap: wrap;          /* allow wrap on small screens */
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1 1 250px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ───── cards ───── */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.error {
+  color: crimson;
+}
+
+.tracks li {
+  margin-bottom: 0.8rem;
+}
