@@ -137,29 +137,19 @@ export default function App() {
         </section>
       )}
 
-      {playlist && (
-        <section className="card">
-          <h2>
-            Recommended Playlist:{' '}
-            <a href={playlist.url} target="_blank" rel="noreferrer">
-              {playlist.name}
-            </a>
-          </h2>
-          <p>{playlist.description}</p>
-          <ul className="tracks">
-            {playlist.tracks.map(t => (
-              <li key={t.spotify_url}>
-                <strong>{t.name}</strong> — {t.artist}{' '}
-                {t.preview_url && (
-                  <audio controls src={t.preview_url}>
-                    Your browser does not support the audio element.
-                  </audio>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+    {playlist && (
+      <section className="card">
+        <h2>
+          Recommended Playlist:{' '}
+          <a href={playlist.url} target="_blank" rel="noreferrer">
+            {playlist.name}
+          </a>
+        </h2>
+        {playlist.description && <p>{playlist.description}</p>}
+        {/* tracks no longer provided; link takes the user to Spotify */}
+      </section>
+    )}
+
     </div>
   );
 }
