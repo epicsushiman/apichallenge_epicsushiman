@@ -10,6 +10,8 @@ export default function App() {
   const [weather, setWeather] = useState(null);
   const [playlist, setPlaylist] = useState(null);
   const [error, setError] = useState(null);
+  const API_BASE = import.meta.env.VITE_API_BASE || '/api';
+
 
   /* ───────────────────────── helpers ───────────────────────── */
 
