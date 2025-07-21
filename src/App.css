@@ -1,7 +1,5 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Global styles with animated gradient background */
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -23,7 +21,6 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Container with glassmorphism effect - now perfectly centered */
 .container {
   max-width: 800px;
   width: 100%;
@@ -36,7 +33,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Title styling */
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -58,7 +54,6 @@ h1 {
   50% { background-position: 100% 50%; }
 }
 
-/* Form styling */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +62,6 @@ form {
   align-items: stretch;
 }
 
-/* Input styling with modern design */
 input {
   flex: 1 1 300px;
   padding: 1rem 1.5rem;
@@ -94,13 +88,11 @@ input::placeholder {
   font-weight: 400;
 }
 
-/* Button group */
 .btn-group {
   display: flex;
   gap: 0.8rem;
 }
 
-/* Button styling with hover effects */
 button {
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
@@ -135,7 +127,6 @@ button:disabled {
   box-shadow: 0 4px 16px 0 rgba(102, 126, 234, 0.2);
 }
 
-/* Special styling for location button */
 button[type="button"] {
   background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   box-shadow: 0 4px 16px 0 rgba(255, 107, 107, 0.4);
@@ -146,7 +137,6 @@ button[type="button"]:hover:not(:disabled) {
   box-shadow: 0 8px 25px 0 rgba(255, 107, 107, 0.6);
 }
 
-/* Card styling with glassmorphism */
 .card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
@@ -180,7 +170,6 @@ button[type="button"]:hover:not(:disabled) {
   margin-bottom: 0;
 }
 
-/* Error styling */
 .error {
   color: #ff6b6b;
   font-weight: 500;
@@ -194,7 +183,6 @@ button[type="button"]:hover:not(:disabled) {
   margin: 1rem 0;
 }
 
-/* Link styling in playlist cards */
 .card a {
   color: #667eea;
   text-decoration: none;
@@ -215,7 +203,6 @@ button[type="button"]:hover:not(:disabled) {
   display: inline-block;
 }
 
-/* Weather icon styling */
 .weather-info {
   display: flex;
   align-items: center;
@@ -234,7 +221,6 @@ button[type="button"]:hover:not(:disabled) {
   text-transform: capitalize;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   body {
     align-items: flex-start;
@@ -282,7 +268,6 @@ button[type="button"]:hover:not(:disabled) {
   }
 }
 
-/* Loading animation */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
@@ -292,7 +277,6 @@ button:disabled {
   animation: pulse 1.5s ease-in-out infinite;
 }
 
-/* Subtle entrance animations */
 .card {
   animation: slideUp 0.5s ease-out;
 }

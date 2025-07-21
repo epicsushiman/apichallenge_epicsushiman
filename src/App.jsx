@@ -11,7 +11,6 @@ export default function App() {
   const [playlist, setPl] = useState(null);
   const [error, setError] = useState(null);
 
-  /* ───────── helpers ───────── */
 
   const safeJson = async r => {
     if (r.ok) return r.json();
@@ -22,7 +21,6 @@ export default function App() {
   const wByCoords = (x, y) => fetch(`${API_BASE}/weather/coords?lat=${x}&lon=${y}`).then(safeJson);
   const plByDesc = d => fetch(`${API_BASE}/spotify/playlist?weather=${encodeURIComponent(d)}`).then(safeJson);
 
-  /* ───────── handlers ───────── */
 
   const showWeather = async w => {
     setWeather(w);
@@ -56,7 +54,6 @@ export default function App() {
     );
   };
 
-  /* ───────── view ───────── */
 
   return (
     <div className="container">
