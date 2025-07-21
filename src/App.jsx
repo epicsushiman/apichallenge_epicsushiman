@@ -1,47 +1,39 @@
 import { useState } from 'react';
 import './App.css';
-const API_BASE = '/api';
 
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';   
 
 export default function App() {
-  const [city, setCity] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [city, setCity]           = useState('');
+  const [loading, setLoading]     = useState(false);
   const [geoLoading, setGeoLoading] = useState(false);
-  const [weather, setWeather] = useState(null);
-  const [playlist, setPlaylist] = useState(null);
-  const [error, setError] = useState(null);
-  const API_BASE = import.meta.env.VITE_API_BASE || '/api';
+  const [weather, setWeather]     = useState(null);
+  const [playlist, setPlaylist]   = useState(null);
+  const [error, setError]         = useState(null);
 
-
-  /* ───────────────────────── helpers ───────────────────────── */
+  /* ─────────── helpers ─────────── */
 
   async function safeJson(res) {
     const ct = res.headers.get('content-type') || '';
     if (ct.includes('application/json')) return res.json();
-
-    const text = await res.text();
-    throw new Error(text.trim().slice(0, 250) || 'Non-JSON response');
+    throw new Error((await res.text()).trim().slice(0, 250) ||
+                    'Non-JSON response');
   }
 
-  async function fetchWeatherByCity(name) {
-    const res = await fetch(`${API_BASE}/weather/${encodeURIComponent(name)}`);
-    if (!res.ok) throw new Error('City not found or weather API failed');
-    return safeJson(res);
-  }
+  const fetchWeatherByCity = name =>
+    fetch(`${API_BASE}/weather/${encodeURIComponent(name)}`)
+      .then(res => res.ok ? safeJson(res)
+                          : Promise.reject(new Error('City not found')));
 
-  async function fetchWeatherByCoords(lat, lon) {
-    const res = await fetch(`${API_BASE}/weather/coords?lat=${lat}&lon=${lon}`);
-    if (!res.ok) throw new Error('Weather API failed with coordinates');
-    return safeJson(res);
-  }
+  const fetchWeatherByCoords = (lat, lon) =>
+    fetch(`${API_BASE}/weather/coords?lat=${lat}&lon=${lon}`)
+      .then(res => res.ok ? safeJson(res)
+                          : Promise.reject(new Error('Coords lookup failed')));
 
-  async function fetchPlaylist(desc) {
-    const res = await fetch(
-      `${API_BASE}/spotify/playlist?weather=${encodeURIComponent(desc)}`
-    );
-    if (!res.ok) throw new Error('No matching playlist');
-    return safeJson(res);
-  }
+  const fetchPlaylist = desc =>
+    fetch(`${API_BASE}/spotify/playlist?weather=${encodeURIComponent(desc)}`)
+      .then(res => res.ok ? safeJson(res)
+                          : Promise.reject(new Error('No matching playlist')));
 
   /* ───────────────────────── handlers ───────────────────────── */
 
