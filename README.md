@@ -1,13 +1,58 @@
-# React + Vite
+# Travel Mood Playlist 🎵 ✈️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful web application that combines real-time weather data with curated Spotify playlists to match your travel destination's vibe. Simply enter a city name or use your current location to discover the perfect soundtrack for your journey.
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Frontend (React):** [https://travel-mood-frontend.onrender.com](https://travel-mood-frontend.onrender.com)  
+**Backend API:** [https://apichallenge-epicsushiman-backend.onrender.com](https://apichallenge-epicsushiman-backend.onrender.com)
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# apichallenge_epicsushiman_backend
+![Travel Mood Playlist Interface](screenshot-main.png)
+*The main interface with glassmorphism design and animated gradient background*
+
+![Weather and Playlist Results](screenshot-results.png)  
+*Example showing weather data for Egypt with a matching summer playlist recommendation*
+
+## 🚀 Features
+
+- **Real-time Weather Data**: Fetches current weather conditions using OpenWeatherMap API
+- **Smart Mood Mapping**: Intelligently matches weather conditions to musical moods
+- **Spotify Integration**: Finds curated playlists that match the weather vibe
+- **Location Services**: Use GPS to get weather for your current location
+- **Modern UI/UX**: Glassmorphism design with smooth animations and responsive layout
+- **Cross-platform**: Works on desktop, tablet, and mobile devices
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 19.1.0** with Vite
+- **Modern CSS3** with glassmorphism effects
+- **Google Fonts** (Inter & Poppins)
+- **Responsive Design** with CSS Grid/Flexbox
+
+### Backend
+- **Node.js** with Express.js
+- **ES6 Modules** for modern JavaScript
+- **CORS** enabled for cross-origin requests
+- **Environment Variables** for secure API key management
+
+### APIs & Services
+- **OpenWeatherMap API** for weather data
+- **Spotify Web API** for playlist recommendations
+- **Geolocation API** for location services
+
+## 🏃‍♂️ Quick Start
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+- API keys for OpenWeatherMap and Spotify
+
+### Backend Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/epicsushiman/apichallenge_epicsushiman_backend.git
+   cd apichallenge_epicsushiman_backend
