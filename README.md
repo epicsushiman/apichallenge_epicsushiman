@@ -4,7 +4,7 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 ---
 
-## 🌟 Live Demo
+## Live Demo
 
 | Service | URL |
 |---------|-----|
@@ -13,17 +13,7 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 ---
 
-## 📸 Screenshots
-
-| Main Interface | Results View |
-|:--------------:|:------------:|
-| ![Travel Mood Playlist Interface](<img width="989" height="601" alt="Screenshot 2025-08-05 at 8 26 42 PM" src="https://github.com/user-attachments/assets/834cfdb9-a968-413a-bde3-6dd83561a2c4" />) | ![Weather and Playlist Results](<img width="984" height="756" alt="Screenshot 2025-08-05 at 8 27 04 PM" src="https://github.com/user-attachments/assets/e40b03d6-67da-424e-a9a6-a12d93beb78a" />) |
-
-*Left: glassmorphism UI with animated gradient background • Right: weather data for Egypt with a matching summer playlist*
-
----
-
-## 🚀 Features
+## Features
 
 - **Real-time Weather Data** – current conditions via **OpenWeatherMap**
 - **Smart Mood Mapping** – intelligently links weather → musical mood
@@ -34,17 +24,16 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Key Tools |
-|-------|-----------|
 | **Frontend** | React 19.1.0 + Vite · Modern CSS3 (glassmorphism) · Google Fonts (Inter & Poppins) · CSS Grid / Flexbox |
 | **Backend** | Node.js + Express · ES6 Modules · CORS middleware · dotenv for env-var management |
 | **APIs & Services** | OpenWeatherMap · Spotify Web API · Browser Geolocation |
 
 ---
 
-## 🏃‍♂️ Quick Start
+## Quick Start
 
 ### Prerequisites
 
