@@ -8,7 +8,7 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 | Service | URL |
 |---------|-----|
-| **Frontend (React)** | <https://apichallenge-epicsushiman.onrender.com/> |
+| **Frontend (React)** | <https://apichallenge-epicsushiman.onrender.com> |
 | **Backend API** | <https://apichallenge-epicsushiman-backend.onrender.com> |
 
 ---
