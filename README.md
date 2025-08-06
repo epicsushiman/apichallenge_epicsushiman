@@ -55,7 +55,7 @@ npm install
 
 
 # 3. Create a .env file in the project root
-# (copy-paste the block below, then add your own keys)
+## (copy-paste the block below, then add your own keys)
 cat << 'EOF' > .env
 PORT=3000
 OPENWEATHER_KEY=your_openweather_api_key_here
@@ -65,9 +65,9 @@ EOF
 
 
 # 4. Start the server
-# ─ Development (Nodemon / hot reload)
+## Development (Nodemon / hot reload)
 npm run dev
 
-# ─ Production
+## Production
 npm start
 
