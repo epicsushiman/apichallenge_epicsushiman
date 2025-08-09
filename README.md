@@ -15,11 +15,10 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 ## Features
 
-- **Real-time Weather Data** – current conditions via **OpenWeatherMap**
-- **Smart Mood Mapping** – intelligently links weather → musical mood
+- **Real-time Weather Data** – current conditions via OpenWeatherMap
+- **Mood Mapping** –  links weather to musical mood
 - **Spotify Integration** – pulls curated playlists that fit the vibe
 - **Location Services** – optional GPS lookup for instant local weather
-- **Modern UI/UX** – glassmorphism + smooth animations + responsive layout
 - **Cross-platform** – works great on desktop, tablet, and mobile
 
 ---
@@ -37,8 +36,8 @@ A beautiful web application that combines real-time weather data with curated Sp
 
 ### Prerequisites
 
-- **Node.js 18+**
-- **npm** (or **yarn**)
+- **Node.js**
+- **npm**
 - API keys for **OpenWeatherMap** and **Spotify**
 
 ---
